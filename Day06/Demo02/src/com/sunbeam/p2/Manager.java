@@ -1,4 +1,4 @@
-package com.sunbeam.p1;
+package com.sunbeam.p2;
 
 import java.util.Scanner;
 
@@ -26,8 +26,10 @@ public class Manager extends Employee {
         System.out.println("Bonus - " + bonus);
     }
 
+    @Override
     public void calculateTotalSalary() {
         double totalSalary = salary + bonus;
         System.out.println("Total Salary of Manager - " + totalSalary);
     }
+
 }

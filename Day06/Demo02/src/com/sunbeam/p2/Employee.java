@@ -1,8 +1,8 @@
-package com.sunbeam.p1;
+package com.sunbeam.p2;
 
 import java.util.Scanner;
 
-public class Employee {
+public abstract class Employee {
     int empid;
     double salary;
 
@@ -22,8 +22,18 @@ public class Employee {
         salary = sc.nextDouble();
     }
 
+    @Override
+    public boolean equals(Object obj)// this - e1, obj = e2
+    {
+        return super.equals(obj);
+    }
+
     public void display() {
         System.out.println("Empid - " + empid);
         System.out.println("Salary - " + salary);
     }
+
+
+    // 100% incomplete
+    public abstract void calculateTotalSalary();
 }

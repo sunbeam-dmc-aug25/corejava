@@ -1,4 +1,4 @@
-package com.sunbeam.p1;
+package com.sunbeam.p2;
 
 import java.util.Scanner;
 
@@ -31,8 +31,11 @@ public class Salesman extends Employee {
         System.out.println("Commission per Product - " + commission);
     }
 
-    public void totalSalaryofSalesman() {
+    @Override
+    public void calculateTotalSalary() {
         double totalSalary = salary + (noOfProducts * commission);
         System.out.println("Total Salary of Salesman - " + totalSalary);
     }
+
+
 }

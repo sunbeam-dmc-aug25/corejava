@@ -1,12 +1,15 @@
-package com.sunbeam.p1;
+package com.sunbeam.p2;
 
 import java.util.Scanner;
 
-interface Acceptable {
+abstract class Acceptable {
     public abstract void accept(Scanner sc);
+
+    //public abstract void display();
 }
 
-class Date implements Acceptable {
+
+class Date extends Acceptable {
     int day;
     int month;
     int year;
@@ -17,7 +20,7 @@ class Date implements Acceptable {
     }
 }
 
-class Time implements Acceptable {
+class Time extends Acceptable {
     int hr;
     int min;
 
@@ -27,7 +30,7 @@ class Time implements Acceptable {
     }
 }
 
-class Car implements Acceptable {
+class Car extends Acceptable {
     String name;
     String model;
     double price;
@@ -41,14 +44,6 @@ class Car implements Acceptable {
 
 public class Program01 {
     public static void main(String[] args) {
-//        Car c1 = new Car();
-//        Date d1 = new Date();
-//        Time t1 = new Time();
-//
-//        c1.accept(null);
-//        d1.accept(null);
-//        t1.accept(null);
-
         Acceptable a1;
         //a1 = new Car(); // upcasting
         //a1 = new Date(); // upcasting
